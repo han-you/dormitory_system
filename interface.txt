@@ -1,0 +1,95 @@
+公寓管理   apartment_manage/
+
+Object area_add(Area area);  (post)
+
+Object area_delete(long AreaID); (delete)
+
+Object area_modify(Area area); (post)
+
+
+Object building_add(Building building);  (post)
+
+Object building_delete(long BuildingID); (delete)
+
+Object building_modify(Building building);  (post)
+
+
+Object room_add(Room room);  (post)
+
+Object room_delete(long RoomID); (delete)
+
+Object room_modify(Room room); (post)
+
+Object room_modify(List<Room> rooms); (post)//单层设置，批量设置
+
+Object area_all(); (get)
+
+Object select_area_by_areaname(String areaName); (post)
+
+Object select_building_by_buildingname(String BuildingName); (post)  //根据BuildingName返回Building
+
+Object building_all(); (get)//显示所有Building
+
+Object select_room_by_BuildingID_and_floor(long buildingID,int floor);(post) 
+
+Object get_total_people_by_RoomID(long RoomID);(post)
+
+Object get_total_people_by_BuildingID(long BuildingID);(post)
+
+Object get_total_people_by_AreaID(long AreaID);(post)
+
+Object select_student_by_name_and_StudentID(Student student);(post)
+
+
+
+
+住宿管理   Accommodation_manage/ 
+//排宿显示全部没有入住学生，
+
+Object admit_adjust_dormitory(Adjust_dormitory adjust_dormitory);(post)
+
+Object select_building_by_gender(String gender); (post)
+
+Object allocate_dormitory(List<Student>students,long BuildingID,String stragy);(post)
+
+Object get_student_without_room();(get)
+
+Object college_all(); (get)
+
+Object select_major_by_CollegeID(long CollegeID);(post)
+
+Object select_class_by_MajorID(long MajorID);(post)
+
+Object select_student_by_ccm(long CollegeID,long MajorID,long ClassID);(post) //根据学院号，专业号，班级号（专业号和学员号可能为空）
+
+Object select_building_by_area(long AreaID);(post)
+
+Object select_room_by_building(long BuildingID);(post)
+
+Object select_student_by_abr(long AreaID,long BuildingID,long RoomID);(post)//根据园区号，楼栋号，房间号（楼栋号和房间号可能为空）
+
+Object select_imcompleted_adjust();(get)
+
+Object handle_adjust(List<Adjust_dormitory>list);(post)//改写调整表的状态。
+
+维修管理   repairment_manage/
+
+
+
+寝室管理  room_manage/
+
+
+
+系统管理  system_manage/
+
+
+
+基础信息  information_manage/
+
+
+
+报表管理   table_manage/
+
+
+
+
